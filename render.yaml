@@ -1,15 +1,15 @@
 services:
   - type: web
     name: hydroboost-app
-    runtime: python3
+    runtime: python3.11
     buildCommand: |
       cd /opt/render/project/src || exit 1
       pwd
       ls -la
       if [ -f requirements.txt ]; then
-        pip install -r requirements.txt
+        python -m pip install -r requirements.txt
       elif [ -f mi_proyecto_flet/requirements.txt ]; then
-        pip install -r mi_proyecto_flet/requirements.txt
+        python -m pip install -r mi_proyecto_flet/requirements.txt
       else
         echo "ERROR: requirements.txt not found in /opt/render/project/src or mi_proyecto_flet/"
         ls -la
