@@ -3,6 +3,7 @@ services:
     name: hydroboost-app
     runtime: python3
     buildCommand: |
+      cd /opt/render/project/src || exit 1
       pwd
       ls -la
       if [ -f requirements.txt ]; then
@@ -10,7 +11,7 @@ services:
       elif [ -f mi_proyecto_flet/requirements.txt ]; then
         pip install -r mi_proyecto_flet/requirements.txt
       else
-        echo "ERROR: requirements.txt not found in root or mi_proyecto_flet/"
+        echo "ERROR: requirements.txt not found in /opt/render/project/src or mi_proyecto_flet/"
         ls -la
         exit 1
       fi
