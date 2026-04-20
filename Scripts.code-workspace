@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": ".venv/Scripts"
+		},
+		{
+			"path": ".venv/Include"
+		},
+		{
+			"path": ".venv/Lib"
+		}
+	]
+}

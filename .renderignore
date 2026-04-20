@@ -1,0 +1,12 @@
+# Render ignore file
+mi_proyecto_flet/
+MiProyectoFlet/
+RetoHidratacion/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+venv/
+.git/
+.DS_Store
